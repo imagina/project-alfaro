@@ -176,11 +176,11 @@ return [
   
   /*Layout Posts - Index */
   'layoutIndex' => [
-    'default' => 'three',
+    'default' => 'four',
     'options' => [
       'four' => [
-        'name' => 'three',
-        'class' => 'col-6 col-md-4 col-lg-3',
+        'name' => 'four',
+        'class' => 'col-6 col-md-3 col-lg-3',
         'icon' => 'fa fa-th-large',
         'status' => true
       ],
