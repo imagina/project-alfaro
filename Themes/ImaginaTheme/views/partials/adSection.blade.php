@@ -1,4 +1,4 @@
-<section id="adsSection" class="py-2 py-md-5">
+<section id="adsSection" class="">
   @php
     $customNewsCategoriesHome = json_decode(setting('icustom::categoriesAdsInHome',null,"[]"));
     $adRepository = app('Modules\Iad\Repositories\CategoryRepository');
@@ -6,13 +6,15 @@
     $categories = $adRepository->getItemsBy(json_decode(json_encode($params)));
   @endphp
   <div class="container">
-    <h3 class="content-title">
-      <span class="d-block pb-3 mt-3 title text-center">{{trans('icustom::common.home.titleAdsFeatured')}}</span>
+    <h3 class="content-title text-primary">
+      <span class="d-block pb-5 mt-3 title text-center">
+        {{trans('icustom::common.home.titleAdsFeatured')}}
+      </span>
     </h3>
-    <ul class="nav nav-tabs pins-tabs mb-5 d-flex justify-content-center" role="tablist">
+    <ul class="nav nav-tabs pins-tabs d-flex justify-content-center" role="tablist">
       @php($counter = 0)
       @foreach($categories as $category)
-
+        
         @php($counter++)
         @php($counter == 1 ? $state = 'active' : $state = ' ')
         <li class="nav-item">

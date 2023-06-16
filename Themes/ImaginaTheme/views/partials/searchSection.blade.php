@@ -1,7 +1,7 @@
 <div id="searchSection">
   <div class="content-section container">
     @if(isset($page) && $page->id == 1)
-      <div class="title-section col-12 py-5">
+      <div class="title-section col-12">
         <div class="title-section-search py-2 text-center">
           {{trans('icustom::common.home.titleSectionSearch')}}
         </div>

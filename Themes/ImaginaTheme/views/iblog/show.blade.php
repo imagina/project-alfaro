@@ -35,46 +35,55 @@
         <div class="pb-5 pt-5" style="background-color: var(--primary)"></div>
       @endif
     </div>
-    <div class="post-content container py-3">
-      @if (isset($post) && !empty($post->mediafiles()->mainimage) && strpos($post->mediaFiles()->mainimage->extraLargeThumb, 'default.jpg') == false)
-        <div class="post-image col-8 m-auto">
-          <x-media::single-image :title="$post->title" :isMedia="true" width="100%"
-                                 :mediaFiles="$post->mediaFiles()"
-                                 zone="mainimage"/>
-        </div>
-      @endif
-      <div class="col-12 title-post-section text-primary text-center py-2">
-        <h1 class="post-title">
-          {{$post->title}}
-        </h1>
-      </div>
-      <div class="post-content-section">
-        {!! $post->description !!}
-        @if(isset($post) && $post->id == 32)
-          <x-iforms::form id="4"/>
-        @endif
-        @if(isset($post) && $post->id == 5)
-          <x-iforms::form id="5"/>
-        @endif
-      </div>
-      <div
-        class="social-share d-flex justify-content-start position-relative zindex-tooltip align-items-center py-3">
-        <div class="mr-2">{{trans('iblog::common.social.share')}}:</div>
-        <div class="sharethis-inline-share-buttons"></div>
-      </div>
-      @if(isset($category) && $category->id == 2 || isset($category->parent) && $category->parent->id == 2)
-        <div class="blog-related col-12 py-3">
-          <h5 class="mb-3 text-center font-weight-bold">{{trans('icustom::common.blog.titleRelatedPosts')}}</h5>
-          <x-isite::carousel.owl-carousel
-            id="Articles"
-            repository="Modules\Iblog\Repositories\PostRepository"
-            :params="['take' => 20,'filter' => ['category' => $category->id,'exclude'=>$post->id]]"
-            :margin="25"
-            :loops="false"
-            :dots="false"
-            mediaImage="mainimage"
-            :responsive="[300 => ['items' =>  1],700 => ['items' =>  2], 1024 => ['items' => 4]]"
-            :itemComponentAttributes="[
+    
+    <div class="content-page col-12 pt-5 pb-3">
+      <div class="container">
+        <div class="row justify-content-center">
+          @if (isset($post) && !empty($post->mediafiles()->mainimage)
+          && strpos($post->mediaFiles()->mainimage->extraLargeThumb, 'default.jpg') == false)
+            <div class="col-md-10 page-image m-auto pt-1 pb-3">
+              <x-media::single-image :title="$post->title"
+                                     :isMedia="true"
+                                     width="100%"
+                                     :mediaFiles="$post->mediaFiles()"
+                                     zone="mainimage"/>
+            </div>
+          @endif
+          <div class="col-md-10">
+            <div class="col-12 title-post-section text-primary text-center pt-4 pb-2">
+              <h1 class="post-title">
+                {{$post->title}}
+              </h1>
+            </div>
+            <div class="content-description">
+              {!! $post->description !!}
+            </div>
+            <div class="form">
+              @if(isset($post) && $post->id == 32)
+                <x-iforms::form id="4"/>
+              @endif
+              @if(isset($post) && $post->id == 5)
+                <x-iforms::form id="5"/>
+              @endif
+            </div>
+            <div
+              class="social-share d-flex justify-content-start position-relative zindex-tooltip align-items-center py-3">
+              <div class="mr-2">{{trans('iblog::common.social.share')}}:</div>
+              <div class="sharethis-inline-share-buttons"></div>
+            </div>
+            @if(isset($category) && $category->id == 2 || isset($category->parent) && $category->parent->id == 2)
+              <div class="blog-related col-12 py-3">
+                <h5 class="mb-3 text-center font-weight-bold">{{trans('icustom::common.blog.titleRelatedPosts')}}</h5>
+                <x-isite::carousel.owl-carousel
+                  id="Articles"
+                  repository="Modules\Iblog\Repositories\PostRepository"
+                  :params="['take' => 20,'filter' => ['category' => $category->id,'exclude'=>$post->id]]"
+                  :margin="25"
+                  :loops="false"
+                  :dots="false"
+                  mediaImage="mainimage"
+                  :responsive="[300 => ['items' =>  1],700 => ['items' =>  2], 1024 => ['items' => 4]]"
+                  :itemComponentAttributes="[
                 'layout'=>'item-list-layout-6',
                 'withImage'=>true,
                 'withTitle'=>true,
@@ -136,11 +145,14 @@
                 'titleLetterSpacing'=>0,
                 'titleVineta'=>'',
                 'titleVinetaColor'=>'text-dark',     ]"
-            :nav="true"
-            :navText="['<i class=\'fa fa-chevron-left\'></i>', '<i class=\'fa fa-chevron-right\'></i>']"
-          />
+                  :nav="true"
+                  :navText="['<i class=\'fa fa-chevron-left\'></i>', '<i class=\'fa fa-chevron-right\'></i>']"
+                />
+              </div>
+            @endif
+          </div>
         </div>
-      @endif
+      </div>
     </div>
   </div>
 @stop

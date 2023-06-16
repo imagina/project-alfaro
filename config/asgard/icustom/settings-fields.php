@@ -40,6 +40,20 @@ return [
       'entityId' => null
     ]
   ],
+  'imageBackgroundSearch2' => [
+    'value' => (object)['setting::mainimage' => null],
+    'name' => 'medias_single',
+    'fakeFieldName' => 'icustom::imageBackgroundSearch2',
+    'type' => 'media',
+    'groupName' => 'backgrounds',
+    'groupTitle' => 'icustom::common.settings.groupNameBackgrounds2',
+    'props' => [
+      'label' => 'icustom::common.settings.labelImageBackgroundSearch2',
+      'zone' => 'setting::mainimage',
+      'entity' => "Modules\Setting\Entities\Setting",
+      'entityId' => null
+    ]
+  ],
   'imageBackgroundFooter' => [
     'value' => (object)['setting::mainimage' => null],
     'name' => 'medias_single',
