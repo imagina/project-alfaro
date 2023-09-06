@@ -12,7 +12,7 @@
     "Translation": true,
     "User": true,
     "Workshop": true,
-    "Ibanners": true,
+    "Ibanners": false,
     "Iblog": true,
     "Iforms": true,
     "Ihelpers": true,
@@ -23,5 +23,7 @@
     "Isite": true,
     "Notification": true,
     "Slider": true,
-    "Ibuilder": true
+    "Ibuilder": true,
+    "Iad": true,
+    "Igamification": true
 }

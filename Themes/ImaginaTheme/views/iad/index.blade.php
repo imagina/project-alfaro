@@ -8,10 +8,10 @@
 
   <div id="content_index_commerce"
        class="page icommerce icommerce-index {{isset($category->id) ? 'iad-index-category iad-index-category-'.$category->id : ''}} pb-5">
-    <div class="col-lg-12 sidebar banner-search py-5"
-         style="background-image: url({{setting("icustom::imageBackgroundSearchAds")}})">
-      @include('partials.searchSection')
-    </div>
+{{--    <div class="col-lg-12 sidebar banner-search py-5"--}}
+{{--         style="background-image: url({{setting("icustom::imageBackgroundSearchAds")}})">--}}
+{{--      @include('partials.searchSection')--}}
+{{--    </div>--}}
     <div class="container py-3">
       <div class="row">
         <div class="col-12">

@@ -5,5 +5,3 @@ $(document).ready(function() {
         }
     });
 })
-
-window.owlCarousel = require('owl.carousel');

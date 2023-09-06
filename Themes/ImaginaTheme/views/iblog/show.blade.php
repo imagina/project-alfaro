@@ -139,7 +139,7 @@
                 'titleMarginB'=>'mb-2',
                 'titleAlign'=>'justify-content-center text-center',
                 'titleColor'=>'text-primary',
-                'titleTextSize'=>20,
+                'titleTextSize'=>18,
                 'titleTextWeight'=>'font-weight-bold',
                 'titleTextTransform'=>'',
                 'titleLetterSpacing'=>0,

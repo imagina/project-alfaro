@@ -30,6 +30,7 @@
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.26.11",
     "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.7.14",
     "webpack-mild-compile": "^3.3.1",
     "webpack-shell-plugin": "^0.5.0"
   },

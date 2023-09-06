@@ -20,7 +20,6 @@
       <div class="pb-5 pt-5" style="background-color: var(--primary)"></div>
     @endif
   </div>
-  
   <div class="content-page col-12 pt-5 pb-3">
     <div class="container">
       <div class="row justify-content-center">

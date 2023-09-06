@@ -39,14 +39,14 @@
 @stop
 @section('content')
   <div class="ads-view">
-    <div class="col-lg-12 sidebar banner-search py-5"
+    <div class="col-lg-12 sidebar banner-search"
          style="background-image: url({{setting("icustom::imageBackgroundSearchAds")}})">
       @include('partials.searchSection')
     </div>
     <div class="col-12">
       @include('partials.breadcrumbAds')
     </div>
-    <div class="content-section pt-5">
+    <div class="content-section pb-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6 px-0 gallery-section">

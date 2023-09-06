@@ -92,7 +92,9 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "exclude-from-classmap": ["vendor/mcamara/laravel-localization/src/Mcamara/LaravelLocalization/LaravelLocalization.php"],
+        "files": ["app/Overrides/LaravelLocalization.php"]
     },
     "extra": {
         "branch-alias": {
@@ -118,7 +120,10 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
