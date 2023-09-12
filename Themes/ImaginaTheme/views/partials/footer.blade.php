@@ -14,7 +14,7 @@
           </div>
           <x-isite::contact.emails/>
           {{--          <x-isite::contact.phones/>--}}
-          <x-isite::whatsapp layout="whatsapp-layout-1" :showCountry="false" :showNumberCountry="true"/>
+          <x-isite::whatsapp layout="whatsapp-layout-1" :showCountry="true" :showNumberCountry="true"/>
           <x-isite::contact.addresses/>
         </div>
         <div class="col-md-6 col-lg-3 pb-4 pb-lg-0">

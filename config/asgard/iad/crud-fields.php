@@ -16,6 +16,30 @@ return [
         'label' => 'icustom::common.crudFields.labelSquareMeter',
       ]
     ],
+    'lotAreaMeter' => [
+      'value' => null,
+      'name' => 'lotAreaMeter',
+      'type' => 'input',
+      'required' => true,
+      'isFakeField' => true,
+      'fakeFieldName' => 'options',
+      'props' => [
+        'entity' => "Modules\Iad\Entities\Ads",
+        'label' => 'icustom::common.crudFields.lotAreaMeter',
+      ]
+    ],
+    'builtAreaMeter' => [
+      'value' => null,
+      'name' => 'builtAreaMeter',
+      'type' => 'input',
+      'required' => true,
+      'isFakeField' => true,
+      'fakeFieldName' => 'options',
+      'props' => [
+        'entity' => "Modules\Iad\Entities\Ads",
+        'label' => 'icustom::common.crudFields.builtAreaMeter',
+      ]
+    ],
     'bedrooms' => [
       'value' => null,
       'name' => 'bedrooms',
