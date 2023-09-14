@@ -86,7 +86,8 @@
                 </a>
               @endif
               @if(isset($item->options->facebook))
-                <a class="btn btn-facebook" href="https://www.facebook.com/{{ $item->options->facebook }}"
+                <a class="btn btn-facebook"
+                   href="https://www.facebook.com/{{ $item->options->facebook }}"
                    target="_blank">
                   <i class="fa fa-facebook"> </i> {{trans('icustom::common.ads.optionContactFacebook')}}
                 </a>
@@ -172,6 +173,19 @@
                       <b>{{trans('icustom::common.ads.detailsSquareMeter')}}</b>
                       <span class="badge info-badge">
                         {{$item->options->squareMeter}}m²</span>
+                        <br>
+                    @endif
+                    @if(isset($item->options->lotAreaMeter))
+                      <b>{{trans('icustom::common.crudFields.lotAreaMeter')}}</b>
+                      <span class="badge info-badge">
+                        {{$item->options->lotAreaMeter}}m²</span>
+                        <br>
+                    @endif
+                    @if(isset($item->options->builtAreaMeter))
+                      <b>{{trans('icustom::common.crudFields.builtAreaMeter')}}</b>
+                      <span class="badge info-badge">
+                        {{$item->options->builtAreaMeter}}m²</span>
+                        <br>
                     @endif
                   </div>
                 </div>
@@ -197,30 +211,30 @@
                              zoom="16"/>
             </div>
           @endif
-{{--          <div id="reportSection" class="col-12  py-3">--}}
-{{--            <div class="row justify-content-center">--}}
-{{--              <div class="col-auto">--}}
-{{--                <a class="btn btn-danger"--}}
-{{--                   {{isset($inModal) && $inModal ? 'onclick=Iad__goToReport(event,\''.$item->url."#report".'\')' : 'data-toggle=collapse aria-expanded=false aria-controls=collapsePin'.$item->id}} href="{{isset($inModal) && $inModal ? $item->url."#report" : "#collapsePin".$item->id}}"--}}
-{{--                   role="button">--}}
-{{--                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>--}}
-{{--                  {{trans('iad::common.report')}}--}}
-{{--                </a>--}}
-{{--              </div>--}}
-{{--              <div class="col-12">--}}
-{{--                <div class="collapse mt-4" id="collapsePin{{$item->id}}">--}}
-{{--                  <div class="card card-body pt-4">--}}
+          {{--          <div id="reportSection" class="col-12  py-3">--}}
+          {{--            <div class="row justify-content-center">--}}
+          {{--              <div class="col-auto">--}}
+          {{--                <a class="btn btn-danger"--}}
+          {{--                   {{isset($inModal) && $inModal ? 'onclick=Iad__goToReport(event,\''.$item->url."#report".'\')' : 'data-toggle=collapse aria-expanded=false aria-controls=collapsePin'.$item->id}} href="{{isset($inModal) && $inModal ? $item->url."#report" : "#collapsePin".$item->id}}"--}}
+          {{--                   role="button">--}}
+          {{--                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>--}}
+          {{--                  {{trans('iad::common.report')}}--}}
+          {{--                </a>--}}
+          {{--              </div>--}}
+          {{--              <div class="col-12">--}}
+          {{--                <div class="collapse mt-4" id="collapsePin{{$item->id}}">--}}
+          {{--                  <div class="card card-body pt-4">--}}
 
-{{--                    <x-iforms::form :id="setting('iad::complaintForm')"--}}
-{{--                                    :fieldsParams="['adName' => ['readonly' => 'readonly' , 'value' => $item->title]]"/>--}}
-{{--                    --}}{{--          {!! Forms::render(,'iforms::frontend.form.bt-nolabel.form') !!}--}}
+          {{--                    <x-iforms::form :id="setting('iad::complaintForm')"--}}
+          {{--                                    :fieldsParams="['adName' => ['readonly' => 'readonly' , 'value' => $item->title]]"/>--}}
+          {{--                    --}}{{--          {!! Forms::render(,'iforms::frontend.form.bt-nolabel.form') !!}--}}
 
-{{--                    {!! setting('icustom::noteReportAd') !!}--}}
-{{--                  </div>--}}
-{{--                </div>--}}
-{{--              </div>--}}
-{{--            </div>--}}
-{{--          </div>--}}
+          {{--                    {!! setting('icustom::noteReportAd') !!}--}}
+          {{--                  </div>--}}
+          {{--                </div>--}}
+          {{--              </div>--}}
+          {{--            </div>--}}
+          {{--          </div>--}}
           <div class="related-ads col-12">
             <x-isite::carousel.owl-carousel
               title="{{trans('icustom::common.ads.adsRelated')}}"
