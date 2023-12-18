@@ -482,7 +482,7 @@
   top: 125px;
   height: calc(100vh - 250px);
   overflow-y: scroll;
-  z-index: 666;
+  z-index: 9999;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -508,6 +508,10 @@
     background: white;
     width: 100%;
     z-index: 9;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: auto;
   }
 }
 

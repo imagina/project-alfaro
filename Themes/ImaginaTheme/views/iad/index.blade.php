@@ -13,7 +13,7 @@
         <div class="col-12">
           @include('partials.breadcrumbAds')
         </div>
-        <div class="content-sidebar-float col-3 sidebar">
+        <div class="content-sidebar-float col-md-3 sidebar">
           <livewire:isite::filters :filters="config('asgard.iad.config.filtersIndex')" :showBtnFilter="true"/>
         </div>
         <div class="col-lg-9">
