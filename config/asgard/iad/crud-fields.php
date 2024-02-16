@@ -8,7 +8,7 @@ return [
       'value' => null,
       'name' => 'squareMeter',
       'type' => 'input',
-      'required' => true,
+      'required' => false,
       'isFakeField' => true,
       'fakeFieldName' => 'options',
       'props' => [
@@ -20,7 +20,7 @@ return [
       'value' => null,
       'name' => 'lotAreaMeter',
       'type' => 'input',
-      'required' => true,
+      'required' => false,
       'isFakeField' => true,
       'fakeFieldName' => 'options',
       'props' => [
@@ -32,7 +32,7 @@ return [
       'value' => null,
       'name' => 'builtAreaMeter',
       'type' => 'input',
-      'required' => true,
+      'required' => false,
       'isFakeField' => true,
       'fakeFieldName' => 'options',
       'props' => [
@@ -44,7 +44,7 @@ return [
       'value' => null,
       'name' => 'bedrooms',
       'type' => 'input',
-      'required' => true,
+      'required' => false,
       'isFakeField' => true,
       'fakeFieldName' => 'options',
       'props' => [
@@ -57,7 +57,7 @@ return [
       'value' => null,
       'name' => 'toilets',
       'type' => 'input',
-      'required' => true,
+      'required' => false,
       'isFakeField' => true,
       'fakeFieldName' => 'options',
       'props' => [
@@ -69,7 +69,7 @@ return [
       'value' => null,
       'name' => 'parking',
       'type' => 'input',
-      'required' => true,
+      'required' => false,
       'isFakeField' => true,
       'fakeFieldName' => 'options',
       'props' => [
